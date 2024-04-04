@@ -96,7 +96,7 @@ const createBlockNode = (
 
 // Amount of spaces that define indentation level
 // TODO: should be an option
-const LIST_INDENT_SIZE = 4;
+const LIST_INDENT_SIZE = 2;
 
 function getIndent(whitespaces: string): number {
   const tabs = whitespaces.match(/\t/g);
