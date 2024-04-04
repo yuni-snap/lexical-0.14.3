@@ -336,7 +336,7 @@ function listExport(
 }
 
 // TODO: should be param
-const LIST_INDENT_SIZE = 4;
+const LIST_INDENT_SIZE = 2;
 
 function processNestedLists(
   listNode: ListNode,
