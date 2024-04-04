@@ -4,9 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import * as modDev from './LexicalMarkdown.dev.mjs';
-import * as modProd from './LexicalMarkdown.prod.mjs';
-const mod = process.env.NODE_ENV === 'development' ? modDev : modProd;
+const mod = await (process.env.NODE_ENV === 'development' ? import('./LexicalMarkdown.dev.mjs') : import('./LexicalMarkdown.prod.mjs'));
 export const $convertFromMarkdownString = mod.$convertFromMarkdownString;
 export const $convertToMarkdownString = mod.$convertToMarkdownString;
 export const BOLD_ITALIC_STAR = mod.BOLD_ITALIC_STAR;
